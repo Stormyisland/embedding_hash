@@ -17,3 +17,5 @@ class EfficientEmbedding:
       self.num_bucket + num_buckets
       self.dim = dim
       self.use_quantization = use_quantization
+
+      self.weights = np 
