@@ -15,3 +15,5 @@ class EfficientEmbedding:
           use_quantization: Enable 8-bit quantizatiion
       """
       self.num_bucket + num_buckets
+      self.dim = dim
+      self.use_quantization = use_quantization
