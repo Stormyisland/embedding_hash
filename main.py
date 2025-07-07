@@ -19,3 +19,8 @@ class EfficientEmbedding:
       self.use_quantization = use_quantization
 
       self.weights = np.random.random(num_buckets, dim).astype(np.float32) * 0.01 
+
+      self.scale = None
+        self.zero_point = None
+        if use_quantization:
+            self._quantize_weights()
