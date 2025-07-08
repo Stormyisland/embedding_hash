@@ -40,5 +40,5 @@ def _quantize_weights(self):
         (self.weights / self.scale) + self.zero_point,
         0, 255
           ).astype(np.unit8)
-def 
+def _dequantize(self.scale
           
