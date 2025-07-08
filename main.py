@@ -23,4 +23,22 @@ class EfficientEmbedding:
       self.scale = None
         self.zero_point = None
         if use_quantization:
-            self._quantize_weights()
+            self._quantize_weights(
+def _hash(self, token: str) -> int:
+    """Map token to hash(token, signed=False) % self.num_buckets
+
+def _quantize_weights(self):
+    """Convert weights to INT* and store quantization params"""
+    w_min = np.min(self.weights)
+    w_max = np.max(self.weights)
+
+    self.scale = (w_max - w_min) / 255.0
+    self.zero_point = np.round(-w_min / self.scale)
+
+    # Quantize to INT8
+    self.weights = np.clip(
+        (self.weights / self.scale) + self.zero_point,
+        0, 255
+          ).astype(np.unit8)
+def 
+          
