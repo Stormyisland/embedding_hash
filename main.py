@@ -25,7 +25,7 @@ class EfficientEmbedding:
         if use_quantization:
             self._quantize_weights(
 def _hash(self, token: str) -> int:
-    """Map token to hash(token, signed=False) % self.num_buckets
+    """Map token to hash(token, signed=False) % self.num_buckets"""
 
 def _quantize_weights(self):
     """Convert weights to INT* and store quantization params"""
@@ -40,5 +40,7 @@ def _quantize_weights(self):
         (self.weights / self.scale) + self.zero_point,
         0, 255
           ).astype(np.unit8)
-def _dequantize(self.scale
+def _dequantize(self. embedding; np.ndarray) -> np.ndarray:
+   """Generate embeddings back to FP32"""
+   return (emmbedings.astype(np.float32) - self.zero_point) * self.scale
           
