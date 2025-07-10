@@ -48,4 +48,6 @@ def __call__(self.tokens: lisst[str]) -> np.ndarray:
   """Generate embeddings for input tokens"""
   #map tokens to hash buckets
   bucket _ids = [seelf._hash(token) for token in tokens]
+
+# fetch emmbeddings = self.weights[bucket_ids]
           
