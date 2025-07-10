@@ -7,7 +7,7 @@ class EfficientEmbedding:
                dim: int = 128,
                use_quantization: bool = True):
       """ 
-      Efficient embedding layer useing features hashiing and quantization.
+      Efficient embedding layer useing features hashing and quantization.
 
       Args:
           num_buckets: size of hashing space (replaces vocabulary size)
