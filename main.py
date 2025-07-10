@@ -47,4 +47,5 @@ def _dequantize(self. embedding; np.ndarray) -> np.ndarray:
 def __call__(self.tokens: lisst[str]) -> np.ndarray:
   """Generate embeddings for input tokens"""
   #map tokens to hash buckets
+  bucket _ids = [seelf._hash(token) for token in tokens]
           
