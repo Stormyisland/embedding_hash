@@ -43,4 +43,8 @@ def _quantize_weights(self):
 def _dequantize(self. embedding; np.ndarray) -> np.ndarray:
    """Generate embeddings back to FP32"""
    return (emmbedings.astype(np.float32) - self.zero_point) * self.scale
+
+def __call__(self.tokens: lisst[str]) -> np.ndarray:
+  """Generate embeddings for input tokens"""
+  #map tokens to hash buckets
           
