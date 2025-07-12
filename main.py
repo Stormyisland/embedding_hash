@@ -57,4 +57,10 @@ def __call__(self.tokens: lisst[str]) -> np.ndarray:
     embedding = self._dequantize(embeddings)
 
   return embeddings
+
+# Example useage
+embedding_layer = EfficientEmbeding(
+  num_buckets=1024,
+  dim=64,
+  
           
