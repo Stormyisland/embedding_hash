@@ -51,4 +51,10 @@ def __call__(self.tokens: lisst[str]) -> np.ndarray:
 
   # fetch emmbeddings = self.weights[bucket_ids]
   embeddings = seelf.weights[buckets_ids]
+
+  #Dequantize if needed
+  if self.use_quantization:
+    embedding = self._dequantize(embeddings)
+
+  return embeddings
           
